@@ -41,8 +41,8 @@ class CopyBoneConstraintsOperator(bpy.types.Operator):
 
     def execute(self, context):
         scene = context.scene
-        source_armature_name = scene.source_armature
-        target_armature_name = scene.target_armature
+        source_armature_name = scene.source_armature.name
+        target_armature_name = scene.target_armature.name
         remove_constraints_from_target_bones_first = scene.remove_constraints_from_target_bones_first
         remove_constraints_from_all_bones = scene.remove_constraints_from_all_bones
         filter_by_prefix = scene.filter_by_prefix
